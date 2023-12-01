@@ -1,0 +1,7 @@
+@import './theme/text.scss';
+@import './theme/theme.scss';
+
+html { 
+    font-size: 10px;
+    @apply bg-dark text-white;
+ }

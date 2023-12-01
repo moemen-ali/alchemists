@@ -1,0 +1,12 @@
+::ng-deep {
+  .owl-theme .owl-nav {
+    @apply flex justify-end;
+    .owl-prev,
+    .owl-next {
+      @apply border border-[#476277] bg-[#5E829B] w-40 h-40 rounded-full flex items-center justify-center #{!important};
+      i {
+        @apply text-lg;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.home-bg {
+  background: url("/assets/images/main-bg.svg");
+  background-blend-mode: overlay;
+  background-position: right top -40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @apply h-screen bg-no-repeat;
+}
+.custom-title {
+  h3 {
+    @apply text-primary text-lg font-semibold text-center relative p-8;
+    &::before,
+    &::after {
+      content: "";
+      @apply bg-primary w-1/2 h-2 top-1/2 absolute;
+    }
+
+    &::before {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    &::after {
+      right: 0;
+      transform: translateX(100%);
+    }
+  }
+}
+.image-container {
+  position: relative;
+  display: inline-block; /* or block, depending on your layout */
+}
+
+.image-container {
+    img {
+        position: relative;
+    }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+}
+#team {
+  background: url("/assets/images/team-bg.svg");
+  background-blend-mode: overlay;
+  background-position: right top -40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

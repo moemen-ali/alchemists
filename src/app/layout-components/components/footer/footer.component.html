@@ -1,0 +1,19 @@
+<div class="grid grid-cols-3 bg-black w-full px-36 py-18 align-middle">
+    <div class="flex items-center">
+        <h4 class="text-base">
+            &#64; 2023 Alchemists. All rights reserved.
+        </h4>
+    </div>
+
+    <div class="logo">
+        <h1 class="font-yellowtail text-primary text-6xl text-center">AIchemists</h1>
+    </div>
+
+    <div class="grid grid-cols-4 gap-16 w-fit ms-auto">
+        @for(link of socialMediaLink; track link.id) {
+        <span class="rounded-full bg-white w-36 h-36 flex items-center justify-center">
+            <i [ngClass]="link.class" class="text-base font-semibold text-dark"></i>
+        </span>
+        }
+    </div>
+</div>

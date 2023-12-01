@@ -1,0 +1,24 @@
+.contact {
+    @apply px-70 text-center;
+    .header {
+        @apply text-larger text-primary font-semibold font-poppins;
+    }
+    .description {
+        @apply text-white text-base w-1/2 mx-auto;
+    }
+    &__form {
+        @apply grid grid-cols-2 gap-20;
+        &--wrapper {
+            @apply bg-black grid grid-cols-2 pt-90 pb-40 px-45 rounded-2xl;
+        }
+        label {
+            @apply text-xs font-bold mb-8;
+        }
+        .input {
+            @apply bg-input-bg border border-input-border rounded-xl py-9 px-13 w-full text-sm;
+        }
+        .form-control {
+            @apply flex flex-col items-start;
+        }
+    }
+}

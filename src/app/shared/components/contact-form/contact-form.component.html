@@ -1,0 +1,28 @@
+<div class="contact" id="contact">
+    <h3 class="header">Contact us</h3>
+    <p class="description">
+        For further questions, including partnership opportunities, please email hello&#64;gmail.com or contact using our contact form.
+    </p>
+
+    <div class="contact__form--wrapper mt-50">
+        <form class="contact__form" #contactForm="ngForm">
+            <div class="form-control col-span-2 md:col-span-1">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" placeholder="Full Name" class="input" id="name">
+            </div>
+            <div class="form-control col-span-2 md:col-span-1">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="hello@creative-tim.com" class="input" id="email">
+            </div>
+            <div class="form-control col-span-2 mt-8">
+                <label for="description">How can we help you?</label>
+                <textarea name="description" id="description" class="input" placeholder="Describe your problem in at least 250 characters"></textarea>
+            </div>
+
+
+            <button class="main-btn md:ms-auto col-span-2">
+                Send
+            </button>
+        </form>
+    </div>
+</div>

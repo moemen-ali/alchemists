@@ -1,0 +1,12 @@
+#app-container {
+  position: relative;
+}
+
+#mobile-menu {
+  display: none;
+  transition: left 0.3s ease;
+}
+
+#mobile-menu.open {
+  display: block;
+}

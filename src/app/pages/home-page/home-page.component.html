@@ -1,0 +1,126 @@
+<div id="home" class="flex items-end content-center home-bg px-90 pt-60">
+    <div class="mx-auto flex flex-col items-center pb-60 font-poppins w-1/2">
+
+        <h3 class="text-white text-7xl font-semibold text-center">
+            Where AI Transcends
+            Ideas into Action!
+        </h3>
+        <p class="text-white text-3xl my-28 text-center">
+            TaskAlchemy is an AI based app to ease the process of transforming stories into sub-tasks across different
+            domains
+        </p>
+        <button class="main-btn">
+            TRY NOW
+        </button>
+        <button class="mt-40 text-white text-b-md" (click)="navigateToSection('#about')">
+            Scroll down
+            <i class="alch-arrow-down mx-9"></i>
+        </button>
+    </div>
+
+</div>
+
+<div id="about" class="custom-title">
+    <div class="mx-auto flex flex-col items-center pt-80 font-poppins w-3/4">
+
+        <h3 class="title">
+            About
+        </h3>
+        <p class="text-white text-lg mt-16 mb-50 text-center">
+            We believe in the potential of creativity and smooth cooperation at TaskAIchemy. Our objective is to use
+            cutting-edge artificial intelligence to revolutionise the way tales are translated into actionable tasks
+            across multiple areas
+        </p>
+    </div>
+</div>
+
+<div id="team" class="custom-title">
+    <div class="mx-auto flex flex-col items-center pt-200 font-poppins w-3/4">
+
+        <h3 class="title">
+            Team
+        </h3>
+        <div class="grid w-full grid-cols-1 lg:grid-cols-4 gap-16">
+
+            @for (teamMember of teamMembersList.slice(0, 4); track teamMember.id) {
+            <div class="self-center col-span-1">
+                <div class="image-container w-full lg:w-auto">
+                    <img class="w-full lg:w-auto" [src]="teamMember.img" alt="">
+                </div>
+                <div class="p-16">
+                    <p class="text-sm text-primary">{{teamMember.name}}</p>
+                    <p class="text-sm text-white">{{teamMember.title}}</p>
+                </div>
+            </div>
+            }
+        </div>
+        <div class="w-full lg:w-auto flex flex-col lg:flex-row justify-center gap-16">
+
+            @for (teamMember of teamMembersList.slice(4); track teamMember.id) {
+            <div class="self-center w-full lg:w-auto col-span-2">
+                <div class="image-container w-full lg:w-auto">
+                    <img [src]="teamMember.img" alt="" class="w-full lg:w-auto">
+                </div>
+                <div class="p-16">
+                    <p class="text-sm text-primary">{{teamMember.name}}</p>
+                    <p class="text-sm text-white">{{teamMember.title}}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+
+
+    <div id="numbers" class="px-70 mb-60 mt-50">
+        <div class="bg-black grid grid-cols-2 md:grid-cols-4 p-24 gap-40">
+            @for (statisticsItem of statisticsList; track statisticsItem.id) {
+            <div class="text-center">
+                <p class="text-white text-xl font-semibold">{{statisticsItem.value}}</p>
+                <p class="text-primary text-base">{{statisticsItem.label}}</p>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div id="reviews" class="px-70 mb-60 mt-50">
+    <app-contact-form></app-contact-form>
+</div>
+<div id="reviews" class="px-70 mb-120 mt-50 custom-title">
+    <div class="mx-auto flex flex-col items-center pt-80 font-poppins w-3/4">
+
+        <h3 class="title">
+            Clients feedback
+        </h3>
+        <p class="text-white text-lg mt-16 mb-50 text-center">
+            is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy
+        </p>
+    </div>
+
+    <app-carousel [sliderData]="reviewsList"></app-carousel>
+</div>
+
+<div id="newsLetter" class="px-70 mb-60 mt-50">
+    <div class="bg-black flex flex-col items-center justify-center p-34">
+        <h3 class="text-xl text-primary">
+            Subscribe Our Newsletter
+        </h3>
+
+        <p class="text-base text-white mb-28 mt-16">
+            Subscribe to receive the latest news and updates about Alchemists.
+            We promise not to spam you!
+        </p>
+
+        <div>
+            <label for="news-letter-subscription" class="sr-only">Label</label>
+            <div class="flex rounded-lg shadow-sm">
+                <input type="text" id="news-letter-subscription" name="news-letter-subscription"
+                    class="bg-input-bg-dark text-white p-16 rounded-s-md text-base" placeholder="Enter Email">
+                <button type="button" class="main-btn !rounded-s-none">
+                    Subscripe
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<owl-carousel-o [options]="customOptions">
+
+  @for (reviewCard of sliderData; track reviewCard.id) {
+  <ng-template carouselSlide [id]="reviewCard.id">
+    <div
+      class="text-center bg-transparent hover:bg-black hover:border-primary border-2 border-white rounded-xl p-30 flex flex-col">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <img src="assets/images/user.png" class="!w-50 object-cover me-22" alt="">
+          <div class="text-start">
+            <h4 class="text-base">
+              {{reviewCard.name}}
+            </h4>
+            <h5 class="text-sm text-zinc-600">
+              {{reviewCard.title}}
+            </h5>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <h4 class="text-base">
+            {{reviewCard.reviewValue}}
+          </h4>
+          <i class="alch-star text-yellow-500 text-base"></i>
+        </div>
+      </div>
+      <p class="text-base text-start mt-20">
+        {{reviewCard.reviewNote}}
+      </p>
+    </div>
+  </ng-template>
+  }
+</owl-carousel-o>
